@@ -15,7 +15,7 @@ pub fn generate_random_matrix() -> Vec<Vec<f32>> {
     (0..NUM_ROWS).map(|_| {
         (0..NUM_COLS).map(|_| rng.next_f32()).collect()
     })
-        .collect()
+    .collect()
 }
 
 pub fn colwise_summation(matrix: &Vec<Vec<f32>>) -> f32 {
