@@ -2,7 +2,7 @@
 
 This repository is a scratchspace of mine to play around with some Rust functionality (and measure its impact on runtime). Note that none of this code is intended to be used in production somewhere. 
 
-It currently tests different ways to sum up the entries of a 1024x1024 matrix of type ```Vec<Vec<f32>>``` which represents a collection of row-vectors. It has three different approaches implemented: column-wise summation (which has very bad cache locality), row-wise summation (much better cache locality) and SIMD-accelerated row-wise summation. Interestingly there is a factor of 10x difference on the runtime (on my machine): 
+It currently tests different ways to sum up the entries of a 1024x1024 matrix of type ```Vec<Vec<f32>>``` which represents a collection of row-vectors. It has three different approaches implemented in [lib.rs](src/lib.rs): column-wise summation (which has very bad cache locality), row-wise summation (much better cache locality) and SIMD-accelerated row-wise summation. Interestingly there is a factor of 10x difference on the runtime (on my machine): 
 
 ```
 $ cargo bench
